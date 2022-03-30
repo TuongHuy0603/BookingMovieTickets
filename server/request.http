@@ -1,0 +1,306 @@
+### api bo sung nhanh csdl ko phải api chương trình
+GET http://localhost:5000/api/posts/TypeSeat/1
+###
+GET http://localhost:5000/api/posts/Seat/1
+
+###
+POST http://localhost:5000/api/posts/MovieSchedule
+Content-Type: application/json
+
+{
+    "movie":"621e040da2756f3aa2269880",
+    "ngayChieuGioChieu":"2021-10-18T05:05:05",
+    "giaVe":"75000",
+    "cinema":"621f857826b6a26342ff7423",
+    "thoiLuong":"120"
+}
+###
+"movie":"621e040da2756f3aa2269880",
+"ngayChieuGioChieu":"2021-10-18T05:05:05",
+"giaVe":"75000",
+"cinema":"621f84ae1dbca3e2bd522e24",
+"thoiLuong":"120"
+
+"movie":"621e042fa2756f3aa2269889",
+"ngayChieuGioChieu":"2021-10-19T05:05:05",
+"giaVe":"75000",
+"cinema":"621f84ae1dbca3e2bd522e24",
+"thoiLuong":"120"
+
+"movie":"621e03f3a2756f3aa226987d",
+"ngayChieuGioChieu":"2021-10-18T05:05:05",
+"giaVe":"90000",
+"cinema":"621f84b31dbca3e2bd522e27",
+"thoiLuong":"120"
+
+###
+###
+POST http://localhost:5000/api/posts/Movie
+Content-Type: application/json
+
+{
+    "tenPhim": "Thor: Love and Thunder",
+    "biDanh": "thor-love-and-thunder",
+    "trailer": "https://www.youtube.com/watch?v=cN1ijoR3mnI",
+    "hinhAnh": "http://movie0706.cybersoft.edu.vn/hinhanh/thor-love-and-thunder_gp01.jpg",
+    "moTa": "Thor: Love and Thunder là phim điện ảnh Mỹ thuộc thể loại siêu anh hùng, dựa trên nhân vật cùng tên của sê-ri truyện tranh Marvel. Đây là phần tiếp theo của Thor: Ragnarok, cũng sẽ là phim thứ 29 trong vũ trụ Điện ảnh Marvel. Phim do Marvel Studios sản xuất và được Walt Disney phát hành vào năm 2022.",
+    "ngayKhoiChieu": "2022-07-08T00:00:00",
+    "danhGia": 10
+}
+### 
+POST http://localhost:5000/api/posts/UserType
+Content-Type: application/json
+
+{
+    "tenLoai": "Quản trị"
+}
+###
+"Quản trị"
+"Khách hàng"
+###
+POST http://localhost:5000/api/posts/CinemaSystem
+Content-Type: application/json
+
+{
+    "tenHeThongRap": "cgv",
+    "biDanh": "cgv",
+    "logo": "http://movie0706.cybersoft.edu.vn/hinhanh/cgv.png"
+}
+###
+"tenHeThongRap": "BHD Star Cineplex",
+"biDanh": "bhd-star-cineplex",
+"logo": "http://movie0706.cybersoft.edu.vn/hinhanh/bhd-star-cineplex.png"
+"tenHeThongRap": "cgv",
+"biDanh": "cgv",
+"logo": "http://movie0706.cybersoft.edu.vn/hinhanh/cgv.png"
+###
+
+POST http://localhost:5000/api/posts/CinemaCluster
+Content-Type: application/json
+
+{
+    "tenCumRap": "CGV - Aeon Tân Phú",
+    "diaChi": "30 Bờ Bao Tân Thắng, Sơn Kỳ, Tân Phú",
+    "hinhAnh": null,
+    "maHeThongRap": "621f82ee1dbca3e2bd522e15"
+}
+###
+"tenCumRap": "BHD Star Cineplex - 3/2",
+"diaChi": "L5-Vincom 3/2, 3C Đường 3/2, Q.10",
+"tenCumRap": "BHD Star Cineplex - Phạm Hùng",
+"diaChi": "L4-Satra Phạm Hùng, C6/27 Phạm Hùng, Bình Chánh",
+"tenCumRap": "CGV - Aeon Bình Tân",
+"diaChi": "Tầng 3, TTTM Aeon Mall Bình Tân, Số 1 đường số 17A, khu phố 11, Bình Trị Đông B, Bình Tân",
+"tenCumRap": "CGV - Aeon Tân Phú",
+"diaChi": "30 Bờ Bao Tân Thắng, Sơn Kỳ, Tân Phú",
+###
+
+POST http://localhost:5000/api/posts/Cinema
+Content-Type: application/json
+
+{
+    "tenRap": "Rạp 2",
+    "maCumRap": "621f83e91dbca3e2bd522e21"
+}
+###
+BHStar
+"tenRap": "Rạp 1",
+"tenRap": "Rạp 2",
+"maCumRap": 
+"tenRap": "Rạp 1",
+"tenRap": "Rạp 2",
+"maCumRap": 
+CGV
+"tenRap": "Rạp 1",
+"tenRap": "Rạp 2",
+"maCumRap": 
+"tenRap": "Rạp 1",
+"tenRap": "Rạp 2",
+"maCumRap": 
+###
+
+### ------------------------------------------------
+### api dat ve
+GET http://localhost:5000/api/QuanLyDatVe/LayDanhSachPhongVe?MaLichChieu=6231dd3443d9459ca23eb4b3
+###
+6231dd1443d9459ca23eb4af
+6231dd2643d9459ca23eb4b1
+6231dd3443d9459ca23eb4b3
+6231ddc243d9459ca23eb4b5
+6239e1a9356a2569721478d8
+###
+POST http://localhost:5000/api/QuanLyDatVe/DatVe
+Content-Type: application/json
+
+{
+    "maLichChieu": "6231dd1443d9459ca23eb4af",
+    "danhSachVe": [
+        {
+            "maGhe": "62397ee140922dccf666b673",
+            "giaVe": 75000
+        },
+        {
+            "maGhe": "62397ee140922dccf666b695",
+            "giaVe": 90000
+        }
+    ],
+    "taiKhoanNguoiDung": "123@111"
+}
+###
+POST http://localhost:5000/api/QuanLyDatVe/TaoLichChieu
+Content-Type: application/json
+
+{
+    "maPhim": "621e040da2756f3aa2269880",
+    "ngayChieuGioChieu": "18/09/2021 15:20:00",
+    "maRap": "621f84ae1dbca3e2bd522e24",
+    "giaVe": "75000"
+}
+###
+
+### api phim
+GET http://localhost:5000/api/QuanLyPhim/LayDanhSachPhim
+###
+GET http://localhost:5000/api/QuanLyPhim/LayDanhSachPhimPhanTrang?tenPhim=t
+###
+GET http://localhost:5000/api/QuanLyPhim/LayDanhSachPhimTheoNgay?tuNgay=01-04-2021&denNgay=27-01-2022&tenPhim=r
+
+
+
+
+
+
+
+
+
+
+
+###
+DELETE http://localhost:5000/api/QuanLyPhim/XoaPhim?MaPhim=623c428f352d79713ced7bfe
+###
+
+###
+GET http://localhost:5000/api/QuanLyPhim/LayThongTinPhim?MaPhim=621e042fa2756f3aa2269889
+###
+
+
+
+### api Nguoi dung
+### lay danh sach loai nguoi dung
+POST http://localhost:5000/api/QuanLyNguoiDung/ThongTinTaiKhoan
+Content-Type: application/json
+
+{
+    "taiKhoan": "123456"
+}
+
+###
+GET http://localhost:5000/api/QuanLyNguoiDung/LayDanhSachLoaiNguoiDung
+### dang nhap
+POST http://localhost:5000/api/QuanLyNguoiDung/DangNhap
+Content-Type: application/json
+
+{
+    "taiKhoan": "12312312311ggg",
+    "matKhau": "123456"
+}
+### dang ky khach hang
+POST http://localhost:5000/api/QuanLyNguoiDung/DangKy
+Content-Type: application/json
+
+{
+    "taiKhoan": "123456",
+    "hoTen": "123456",
+    "email": "123456@gmail.com",
+    "soDt": "123456",
+    "matKhau": "123456",
+    "maLoaiNguoiDung": "621e157542c18eb1e10d3272"
+    //"621e157e42c18eb1e10d3274" // mã người dùng quản trị
+    //"621e157542c18eb1e10d3272" // mã người dùng khách hàng
+}
+### tim nguoi dung tu khoa theo taiKhoan, hoTen, soDt, email, hoTen
+GET http://localhost:5000/api/QuanLyNguoiDung/LayDanhSachNguoiDung?tuKhoa=111
+### 
+GET http://localhost:5000/api/QuanLyNguoiDung/LayDanhSachNguoiDungPhanTrang?tuKhoa=111&soPhanTuTrenTrang=2&soTrang=2
+###
+GET http://localhost:5000/api/QuanLyNguoiDung/TimKiemNguoiDung?tuKhoa=111
+### 
+GET http://localhost:5000/api/QuanLyNguoiDung/TimKiemNguoiDungPhanTrang?tuKhoa=111&soPhanTuTrenTrang=2&soTrang=2
+###
+
+### api Rạp
+GET http://localhost:5000/api/QuanLyRap/LayThongTinHeThongRap?maHeThongRap=621f82d51dbca3e2bd522e12
+###
+GET http://localhost:5000/api/QuanLyRap/LayThongTinCumRapTheoHeThong?maHeThongRap=621f82d51dbca3e2bd522e12
+###
+GET http://localhost:5000/api/QuanLyRap/LayThongTinLichChieuPhim?maPhim=621e03f3a2756f3aa226987d
+###
+GET http://localhost:5000/api/QuanLyRap/LayThongTinLichChieuHeThongRap
+###
+?maHeThongRap=621f82d51dbca3e2bd522e12
+###
+
+GET http://localhost:5000/api/QuanLyRap/LayRap?maCumRap=621f83731dbca3e2bd522e18
+
+
+####
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+###
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "username": "nhanvien1",
+    "password": "nhanvien1"
+}
+
+###
+GET http://localhost:5000/admin/usertypes/
+Authorization: sss eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MjE4ZTBmZGU1NjFhODBkNTkwMTYxZmMiLCJpYXQiOjE2NDU3OTc2Mjl9.J1gP0HpIUTbD2XA_c6dh8VcEMCdL02yXEGuO_Cxkdzc
+
+
+
+###
+GET http://localhost:5000/admin/usertypes/62189ddd984a33b3f3077746
+###
+POST http://localhost:5000/admin/usertypes/
+Content-Type: application/json
+
+{
+    "nameUserType": "Khách hàng 0"
+}
+###
+PUT http://localhost:5000/admin/usertypes/6218b41cb4081025d4ba2d95
+Content-Type: application/json
+
+{
+    "nameUserType": "Khách hàng 5"
+}
+###
+DELETE http://localhost:5000/admin/usertypes/6218b41cb4081025d4ba2d95

@@ -25,6 +25,22 @@ export default function Header(props) {
       return (
         <Fragment>
           <button
+            style={{
+              backgroundImage:
+                " linear-gradient(to right top,rgba(33,107,211,.9),rgba(27,94,187,.9),rgba(22,81,163,.9),rgba(19,70,143,.9),rgba(18,62,124,.9),rgba(19,59,116,.9))",
+              boxSizing: "border-box",
+              color: "#fff",
+              textAlign: "center",
+              lineHeight: "10px",
+              width: "135px",
+              fontWeight: "550",
+              height: " 40px",
+              display: "inline-block",
+              borderRadius: "3px",
+              boxShadow: " 0 0 4px rgb(0 0 0 / 50%)",
+              fontSize: " 14px",
+              cursor: "pointer",
+            }}
             onClick={() => {
               history.push("/login");
             }}
@@ -33,12 +49,30 @@ export default function Header(props) {
             {t("signin")}
           </button>
           <button
+            style={{
+              marginLeft: "20px",
+              marginRight: "20px",
+              backgroundImage:
+                " linear-gradient(to right top,rgba(33,107,211,.9),rgba(27,94,187,.9),rgba(22,81,163,.9),rgba(19,70,143,.9),rgba(18,62,124,.9),rgba(19,59,116,.9))",
+              boxSizing: "border-box",
+              color: "#fff",
+              textAlign: "center",
+              lineHeight: "10px",
+              width: "135px",
+              fontWeight: "550",
+              height: " 40px",
+              display: "inline-block",
+              borderRadius: "3px",
+              boxShadow: " 0 0 4px rgb(0 0 0 / 50%)",
+              fontSize: " 14px",
+              cursor: "pointer",
+            }}
             onClick={() => {
               history.push("/register");
             }}
             className="self-center px-8 py-3 font-semibold rounded bg-violet-600 text-coolGray-50"
           >
-            {t("register")}
+            {t("signup")}
           </button>
         </Fragment>
       );
@@ -64,7 +98,7 @@ export default function Header(props) {
           }}
           className="text-yellow-500 mr-5"
         >
-          Đăng xuất
+          {t("logout")}
         </button>
       </Fragment>
     );
@@ -99,29 +133,29 @@ export default function Header(props) {
             </a>
           </li>
           <li className="flex">
-            <NavLink
-              to="/contact"
+            <a
+              href="/home#news"
+              className="flex items-center -mb-0.5 border-b-2 px-4 border-transparent text-white"
+              activeClassName="border-b-2 border-white"
+            >
+              COMING SOON
+            </a>
+          </li>
+          <li className="flex">
+            <a
+              href="/home#contact"
               className="flex items-center -mb-0.5 border-b-2 px-4 border-transparent text-white"
               activeClassName="border-b-2 border-white"
             >
               CONTACT
-            </NavLink>
-          </li>
-          <li className="flex">
-            <NavLink
-              to="/news"
-              className="flex items-center -mb-0.5 border-b-2 px-4 border-transparent text-white"
-              activeClassName="border-b-2 border-white"
-            >
-              NEWS
-            </NavLink>
+            </a>
           </li>
         </ul>
         <div className="items-center flex-shrink-0 hidden lg:flex">
           {renderLogin()}
 
           <Select
-            defaultValue="en"
+            defaultValue="chi"
             style={{ width: 100 }}
             onChange={handleChange}
           >

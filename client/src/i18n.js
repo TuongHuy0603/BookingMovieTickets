@@ -20,9 +20,9 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    fallbackLng: "en",
+    fallbackLng: "vi",
     debug: true,
-    whitelist: ["chi", "en", "vi"], //Liệt kê các ngôn ngữ
+    whitelist: ["vi", "en", "chi"], //Liệt kê các ngôn ngữ
     react: {
       useSuspense: false,
     },

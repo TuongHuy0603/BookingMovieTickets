@@ -39,6 +39,7 @@ export default function HomeCarousel(props) {
             style={{
               ...contentStyle,
               position: "relative",
+              top: 0,
               backgroundImage: `url(${item.hinhAnh})`,
             }}
           >

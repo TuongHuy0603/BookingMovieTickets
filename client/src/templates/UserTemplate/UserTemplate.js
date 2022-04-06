@@ -20,7 +20,7 @@ export const UserTemplate = (props) => {
             <div
               style={{
                 background: " linear-gradient(45deg, #fc466b, #3f5efb)",
-                paddingBottom: "30.7%",
+                paddingBottom: "34%",
                 width: "100%  ",
               }}
             >

@@ -17,6 +17,7 @@ import { history } from "../../../App";
 import {
   layThongTinNguoiDungAction,
   layUsersAction,
+  xoaUserAction,
 } from "../../../redux/actions/QuanLyNguoiDungAction";
 const { Search } = Input;
 export default function Users() {
@@ -27,7 +28,7 @@ export default function Users() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(layUsersAction());
+    dispatch(layUsersAction(quanLyThongTin.taiKhoan));
   }, []);
 
   const columns = [
@@ -95,6 +96,7 @@ export default function Users() {
                     "Bạn có chắc muốn xoá tài khoản " + user.taiKhoan
                   )
                 ) {
+                  dispatch(xoaUserAction(user));
                 }
               }}
             >

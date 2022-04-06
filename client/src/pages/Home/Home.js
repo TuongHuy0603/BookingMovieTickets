@@ -83,6 +83,77 @@ export default function Home(props) {
       <div className="mx-36">
         <HomeMenu heThongRapChieu={heThongRapChieu} />
       </div>
+      <div
+        style={{
+          position: "relative",
+          height: "600px",
+          backgroundImage: "url(../assets/background.b46ef3a1ce082cecae80.jpg)",
+        }}
+      >
+        <div
+          id="news"
+          style={{
+            left: "30%",
+            right: "30%",
+            top: "40%",
+            position: "absolute",
+          }}
+        >
+          <h3 className="text-3xl text-white">
+            Ứng dụng tiện lợi dành cho người yêu điện ảnh
+            <br />
+            <span>
+              Không chỉ đặt vé, bạn còn có thể bình luận phim, chấm điểm rạp và
+              đổi quà hấp dẫn.
+            </span>
+          </h3>
+          <button
+            style={{
+              backgroundColor: "#fb4226",
+              margin: "15px 0",
+              color: "#fff",
+              fontSize: "18px",
+              padding: "15px",
+              borderRadius: "5px",
+            }}
+          >
+            Coming soon
+          </button>
+        </div>
+        <div
+          style={{
+            right: "15%",
+            top: "20%",
+            position: "absolute",
+          }}
+        >
+          <img style={{ width: "200px" }} src="../assets/phone.png" />
+        </div>
+      </div>
+      <div
+        onClick={() => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        }}
+        style={{
+          cursor: "pointer",
+          position: "fixed",
+          height: "50px",
+          zIndex: 10,
+          bottom: "5%",
+
+          textAlign: "center",
+          right: "5%",
+          borderRadius: "5px",
+          width: "50px",
+          backgroundColor: "#f9c1b1",
+          backgroundImage: "linear-gradient(315deg, #f9c1b1 0%, #fb8085 74%)",
+        }}
+      >
+        <span style={{ lineHeight: "50px", fontSize: "35px" }}>⮝</span>
+      </div>
     </div>
   );
 }

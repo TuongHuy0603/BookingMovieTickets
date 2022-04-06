@@ -29,7 +29,6 @@ export default function Register(props) {
       style={{
         height: "100%",
         margin: "0 auto",
-        transform: " translate(10px, 10%)",
       }}
       className={`w-1/3  ${styleLogin.form}`}
     >

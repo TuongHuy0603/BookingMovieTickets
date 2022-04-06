@@ -98,12 +98,9 @@ const AdminTemplate = (props) => {
           <Fragment>
             <Layout style={{ minHeight: "100vh" }}>
               <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
-                <div className="logo p-5">
-                  <img
-                    src="https://cyberlearn.vn/wp-content/uploads/2020/03/cyberlearn-min-new-opt2.png"
-                    alt="..."
-                  />
-                </div>
+                <NavLink to="/home" className="logo p-4">
+                  <img src={require("../../assets/styles/logo.svg").default} />
+                </NavLink>
                 <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
                   <Menu.Item key="1" icon={<UserOutlined />}>
                     <NavLink to="/admin/users">Users</NavLink>
@@ -116,9 +113,7 @@ const AdminTemplate = (props) => {
                       <NavLink to="/admin/films/addnew">Add new</NavLink>
                     </Menu.Item>
                   </SubMenu>
-                  <Menu.Item key="3" icon={<DesktopOutlined />}>
-                    <NavLink to="/admin/showtimes">Showtime</NavLink>
-                  </Menu.Item>
+
                   {/* <SubMenu key="sub1" icon={<UserOutlined />} title="User">
                             <Menu.Item key="3">Tom</Menu.Item>
                             <Menu.Item key="4">Bill</Menu.Item>

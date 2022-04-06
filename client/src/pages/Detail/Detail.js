@@ -124,9 +124,8 @@ export default function Detail(props) {
                             <div className="mt-5" key={index}>
                               <div className="flex flex-row">
                                 <img
-                                  style={{ width: 60, height: 60 }}
-                                  src={cumRap.hinhAnh}
-                                  alt="..."
+                                  src="https://s3img.vcdn.vn/123phim/2018/09/ddc-dong-da-15379624326697.jpg"
+                                  width="50"
                                 />
                                 <div className="ml-2">
                                   <p

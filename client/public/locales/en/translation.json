@@ -3,6 +3,8 @@
         "1":"hello",
         "2":"hi"
     },
-    "signin":"signin",
-    "signup":"signup"
+    "signin":"Signin",
+    "signup":"Signup",
+    "book":"Book ticket",
+    "logout":"Logout"
 }

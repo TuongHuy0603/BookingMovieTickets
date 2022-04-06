@@ -41,7 +41,7 @@ const MultipleRowSlick = (props) => {
   const renderFilms = () => {
     return props.arrFilm?.slice(0, 16).map((item, index) => {
       return (
-        <div className="mt-2" key={index}>
+        <div className="mt-2 mb-3" key={index}>
           <Film_Flip item={item} />
         </div>
       );
@@ -57,10 +57,11 @@ const MultipleRowSlick = (props) => {
     className: "center variable-width",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    centerPadding: "20px",
     slidesToShow: 2,
     speed: 500,
-    rows: 2,
+    rows: 1,
+
     slidesPerRow: 2,
     variableWidth: true,
     nextArrow: <SampleNextArrow />,

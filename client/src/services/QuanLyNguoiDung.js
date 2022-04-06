@@ -14,11 +14,22 @@ export class QuanLyNguoiDungService extends baseService {
   };
 
   layThongTinNguoiDung = (taiKhoan) => {
-    return this.post(`/api/QuanLyNguoiDung/ThongTinTaiKhoan`, { taiKhoan: taiKhoan });
+    return this.post(`/api/QuanLyNguoiDung/ThongTinTaiKhoan`, {
+      taiKhoan: taiKhoan,
+    });
   };
-  
+
   layUsers = () => {
     return this.get("/api/QuanLyNguoiDung/LayDanhSachNguoiDung");
+  };
+  layUser = (tk) => {
+    return this.post("/api/QuanLyNguoiDung/ThongTinTaiKhoan", tk);
+  };
+  xoaUsers = (maUser) => {
+    console.log("aaa", maUser.taiKhoan);
+    return this.delete(
+      `/api/QuanLyNguoiDung/XoaNguoiDung?taiKhoan=${maUser.taiKhoan}`
+    );
   };
 }
 

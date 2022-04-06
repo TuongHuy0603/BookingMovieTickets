@@ -4,5 +4,7 @@
         "2":"Xin chào"
     },
     "signin":"Đăng nhập",
-    "signup":"Đăng ký"
+    "signup":"Đăng ký",
+    "book":"Đặt vé",
+    "logout":"Đăng xuất"
 }

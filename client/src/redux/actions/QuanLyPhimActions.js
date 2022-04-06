@@ -21,10 +21,10 @@ export const layDanhSachPhimAction = (tenPhim = "") => {
 export const themPhimUploadHinhAction = (formData) => {
   return async (dispatch) => {
     try {
-      
       let result = await quanLyPhimService.themPhimUploadHinh(formData);
       alert("Thêm phim thành công!");
       console.log("result", result.data.content);
+      history.push("/admin");
     } catch (errors) {
       console.log(errors.response?.data);
     }
@@ -37,9 +37,8 @@ export const capNhatPhimUploadAction = (formData) => {
       let result = await quanLyPhimService.capNhatPhimUpload(formData);
       alert("Cập nhật phim thành công!");
       console.log("result", result.data.content);
-
       dispatch(layDanhSachPhimAction());
-      history.push("/admin/films");
+      history.push("/admin");
     } catch (errors) {
       console.log(errors.response?.data);
     }
@@ -71,6 +70,7 @@ export const xoaPhimAction = (maPhim) => {
       alert("Xoá phim thành công !");
       //Sau khi xoá load lại danh sách phim mới;
       dispatch(layDanhSachPhimAction());
+      history.push("/admin");
     } catch (errors) {
       console.log("errors", errors.response?.data);
     }

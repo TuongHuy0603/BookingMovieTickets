@@ -78,13 +78,6 @@ export default function Users() {
       render: (text, user) => {
         return (
           <Fragment>
-            <NavLink
-              key={1}
-              className=" mr-2  text-2xl"
-              to={`/admin/films/edit/${user.taiKhoan}`}
-            >
-              <EditOutlined style={{ color: "blue" }} />{" "}
-            </NavLink>
             <span
               style={{ cursor: "pointer" }}
               key={2}
@@ -127,7 +120,7 @@ export default function Users() {
       <Button
         className="mb-5"
         onClick={() => {
-          // history.push("/admin/users/addnew");
+          history.push("/register");
         }}
       >
         Thêm người dùng

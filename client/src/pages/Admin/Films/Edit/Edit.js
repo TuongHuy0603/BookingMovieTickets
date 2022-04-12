@@ -56,6 +56,7 @@ const Edit = (props) => {
 
       //Tạo đối tượng formdata => Đưa giá trị values từ formik vào formdata
       let formData = new FormData();
+      let idn = "";
       for (let key in values) {
         if (key !== "hinhAnh") {
           formData.append(key, values[key]);
@@ -66,7 +67,10 @@ const Edit = (props) => {
         }
       }
       //Cập nhật phim upload hình
+      console.log("aafd", formData.get("maPhim"));
       dispatch(capNhatPhimUploadAction(formData));
+
+      dispatch(layThongTinPhimAction(formData.get("maPhim")));
     },
   });
 

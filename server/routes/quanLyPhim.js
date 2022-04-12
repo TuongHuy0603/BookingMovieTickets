@@ -581,7 +581,7 @@ router.get("/LayThongTinPhim", async (req, res) => {
         responseResult.maPhim = movieFind._id;
         responseResult.tenPhim = movieFind.tenPhim;
         responseResult.biDanh = movieFind.biDanh;
-        responseResult.trailer = movieFind.biDanh;
+        responseResult.trailer = movieFind.trailer;
         responseResult.hinhAnh = movieFind.hinhAnh;
         responseResult.moTa = movieFind.moTa;
         responseResult.hot = movieFind.hot;
@@ -632,7 +632,7 @@ router.post("/ThemPhimUploadHinh", async (req, res) => {
 
   var ngayMMddYYYY = new Date(
     parseInt(ngayKhoiChieu.substring(6, 10), 0),
-    parseInt(ngayKhoiChieu.substring(3, 5), 0),
+    parseInt(ngayKhoiChieu.substring(3, 5), 0) - 1,
     parseInt(ngayKhoiChieu.substring(0, 2), 0)
   );
 

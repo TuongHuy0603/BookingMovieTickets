@@ -50,7 +50,7 @@ export const layThongTinPhimAction = (maPhim) => {
     try {
       //Sử dụng tham số thamSo
       const result = await quanLyPhimService.layThongTinPhim(maPhim);
-
+      console.log("res", result);
       dispatch({
         type: SET_THONG_TIN_PHIM,
         thongTinPhim: result.data.content,

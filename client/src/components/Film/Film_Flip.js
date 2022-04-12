@@ -54,7 +54,9 @@ export default function Film_Flip(props) {
           >
             <div>
               <div className="rounded-full cursor-pointer">
-                <PlayCircleOutlined style={{ fontSize: "50px" }} />
+                <a href={item.trailer}>
+                  <PlayCircleOutlined style={{ fontSize: "50px" }} />
+                </a>
               </div>
               <div className="text-2xl mt-2 font-bold">{item.tenPhim}</div>
             </div>

@@ -99,12 +99,13 @@ export default function Detail(props) {
               <div>
                 <Tabs tabPosition={"left"}>
                   {filmDetail.heThongRapChieu?.map((htr, index) => {
+                    console.log("htr", htr);
                     return (
                       <TabPane
                         tab={
                           <div className="flex flex-row items-center justify-center">
                             <img
-                              src={htr.logo}
+                              src="https://s3img.vcdn.vn/123phim/2018/09/ddc-dong-da-15379624326697.jpg"
                               className="rounded-full w-full"
                               style={{ width: 50 }}
                               alt="..."
@@ -124,8 +125,9 @@ export default function Detail(props) {
                             <div className="mt-5" key={index}>
                               <div className="flex flex-row">
                                 <img
-                                  src="https://s3img.vcdn.vn/123phim/2018/09/ddc-dong-da-15379624326697.jpg"
+                                  src={cumRap.hinhAnh}
                                   width="50"
+                                  style={{ transform: "translate(0, -15px" }}
                                 />
                                 <div className="ml-2">
                                   <p
@@ -145,6 +147,7 @@ export default function Detail(props) {
                                   </p>
                                 </div>
                               </div>
+                              <span>Thời gian chiếu</span>
                               <div className="thong-tin-lich-chieu grid grid-cols-4">
                                 {cumRap.lichChieuPhim?.map(
                                   (lichChieu, index) => {
@@ -157,7 +160,7 @@ export default function Detail(props) {
                                         >
                                           {moment(
                                             chitiet.ngayChieuGioChieu
-                                          ).format("hh A")}
+                                          ).format("hh:mm A")}
                                         </NavLink>
                                       );
                                     });
